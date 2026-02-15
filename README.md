@@ -7,7 +7,8 @@ C --> D[total=0<br>first_count=0<br>i=0]
 
 D --> E{i &lt; len(data)}
 E -- Yes --> F{data[i]==1}
-E -- No --> L{first_count &gt;=2}
+E -- No --> Eend[ループ終了]
+Eend --> L{first_count &gt;=2}
 
 F -- Yes --> G[first_count+1]
 F -- No --> H[そのまま]
